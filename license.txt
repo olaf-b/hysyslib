@@ -1,0 +1,31 @@
+ Hysyslib toolbox - for using Matlab as an activeX/COM controller for Hysys.
+ Copyright (C) 1999,2008 Olaf Trygve Berglihn <olafb@pvv.org>
+
+ Library contents:
+ hyconnect       - Connect to Hysys application as a activeX controller.
+ hyspread        - Connect to Hysys spreadsheet.
+ hycell          - Connect to Hysys spreadsheet cell.
+ hyvalue         - Get value of Hysys spreadsheet cell.
+ hyunits         - Get the string specifying the units of a spreadsheet cell.
+ hyset           - Change value of cell in Hysys spreadsheet.
+ hyhold          - Set Hysys solver in hold mode.
+ hystart         - Set Hysys solver in solve mode.
+ hyissolving     - Check if solver is running.
+ hysolvertoggle  - Toggle solver on/off
+ hyintegtoggle   - Toggle integrator on/off (dynamics mode).
+ hyisintegrating - Check if integrator is running (dynamics mode).
+ hyintegtime     - Get current integrator time in seconds (dynamics mode).
+
+ This library is free software; you can redistribute it and/or modify it
+ under the terms of the GNU Library General Public License version 2 as
+ published by the Free Software Foundation.
+
+ This library is distributed in the hope that it will be useful, but
+ WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+ or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Library General Public
+ License for more details.
+
+ You should have received a copy of the GNU Library General Public
+ License along with this library in the file lgpl.txt; if not, write
+ to the Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+ Boston, MA 02111-1307, USA.

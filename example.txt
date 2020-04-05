@@ -1,0 +1,45 @@
+% Example of hysyslib usage. Matlab printout.
+
+% Create a connection to Hysys.
+» hysys = hyconnect;
+
+% Stop the solver, given it was initially running.
+» hysolvertoggle(hysys);
+
+% Create a connection to a spreadsheet.
+» sprd = hyspread(hysys, 'Name of spreadsheet');
+
+% Connect to the cells A1, A2 og A3 in the spreadsheet. 
+» c = hycell(spread, {'A1', 'A2', 'A3'});
+
+% Read the values of the cells.
+
+» hyvalue(c)
+ans =
+  1.0e+004 *
+    0.0000    4.1444    0.7314
+     
+% Change the value of cell A1 to 0.10.
+» hyset(c{1}, 0.10);
+
+% Start solving.
+» hysolvertoggle(hysys);
+
+% Check if the solver is running.
+» hyissolving(hysys)
+ans =
+     0
+      
+% Read new values of the cells
+» hyvalue(c)
+ans =
+  1.0e+004 *
+    0.0000    4.3882    0.4876
+  
+% Check the units of the cells.  
+» hyunits(c)
+ans = 
+     ''    'kgmole/h'    'kgmole/h'
+
+% Release the connection to Hysys.  Simply runs release(hysys).
+» hyrelease(hysys);
